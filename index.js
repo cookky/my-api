@@ -4,6 +4,10 @@ const port = 3000;
 
 app.use(express.json()); // เพื่อรับข้อมูลแบบ JSON
 
+app.get("/my-profile", (req, res) => {
+  res.json([{ id: 12356656, name: "Alice" }]);
+});
+
 // ตัวอย่าง route
 app.get("/", (req, res) => {
   res.send("Hello API!");
